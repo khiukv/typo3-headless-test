@@ -16,7 +16,7 @@ class AllPagesProcessor
             ->getQueryBuilderForTable('pages');
 
         $pages = $queryBuilder
-            ->select('uid', 'title', 'slug')
+            ->select('uid', 'pid', 'title', 'slug')
             ->from('pages')
             ->where(
                 $queryBuilder->expr()->eq('deleted', $queryBuilder->createNamedParameter(0)),
