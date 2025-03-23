@@ -1,0 +1,30 @@
+base: 'https://typo3-headless.ddev.site/'
+dependencies:
+  - friendsoftypo3/headless
+  - friendsoftypo3/headless-mixed
+frontendBase: 'http://localhost:3000'
+headless: 1
+languages:
+  -
+    title: English
+    enabled: true
+    languageId: 0
+    base: /
+    locale: en_US.UTF-8
+    navigationTitle: English
+    flag: us
+rootPageId: 1
+routeEnhancers:
+  Headless:
+    type: Extbase
+    extension: Headless
+    plugin: API
+    routes:
+      - routePath: '/api/pages'
+        _controller: 'Headless::Pages'
+    defaultController: 'Headless::Pages'
+    defaults:
+      path: 'pages'
+    requirements:
+      path: '.+'
+websiteTitle: ''

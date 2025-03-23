@@ -1,0 +1,90 @@
+mod.web_layout.BackendLayouts {
+    default {
+        title = Standard
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Stage
+                                colPos = 0
+                            }
+                        }
+                    }
+
+                    2 {
+                        columns {
+                            1 {
+                                name = Inhalte
+                                colPos = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    TwoColumns {
+        title = Zwei Spalten
+        config {
+            backend_layout {
+                colCount = 3
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Stage
+                                colPos = 0
+                                colspan = 3
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Hauptspalte
+                                colPos = 1
+                                colspan = 2
+                            }
+                            2 {
+                                name = Seitenleiste
+                                colPos = 2
+                                colspan = 1
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+## Labels for page layout
+TCEFORM.pages.layout {
+    altLabels {
+        #1 = Layout 1
+        #2 = Layout 2
+        #3 = Layout 3
+    }
+
+    addItems {
+        #4 = Layout 4
+    }
+}
+
+TCEFORM.tt_content.frame_class {
+
+    removeItems = ruler-before,ruler-after,indent,indent-left,indent-right,custom-100
+}
+
+# Wir definieren uns eigene Überschriften:
+TCEFORM.tt_content.header_layout.altLabels {
+    1 = H1
+    2 = H2
+    3 = H3
+    4 = H4
+}

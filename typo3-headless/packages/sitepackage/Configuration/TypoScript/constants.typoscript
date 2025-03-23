@@ -1,0 +1,2 @@
+plugin.tx_headless.settings.routing.apiPrefix = api
+plugin.tx_headless.settings.pageNotFoundHandling = 1

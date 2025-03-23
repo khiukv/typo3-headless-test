@@ -1,0 +1,22 @@
+page = PAGE
+page {
+  typeNum = 999999
+
+  10 = USER
+  10 {
+    userFunc = Sitepackage\Sitepackage\DataProcessing\AllPagesProcessor->render
+  }
+
+  config {
+    disableAllHeaderCode = 1
+    additionalHeaders = Content-Type: application/json
+    no_cache = 1
+    sendCacheHeaders = 1
+
+    additionalHeaders {
+      10.header = Access-Control-Allow-Origin: *
+      20.header = Access-Control-Allow-Methods: GET, POST, OPTIONS
+      30.header = Access-Control-Allow-Headers: Content-Type, Authorization
+    }
+  }
+}
